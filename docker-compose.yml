@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  runner:
+    container_name: miguelenes/github-runner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ORGANIZATION=""
+      - ACCESS_TOKEN=""
+    restart: unless-stopped
